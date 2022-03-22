@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_print_label_from_purchase" model="ir.actions.act_window">
+        <field name="name">Custom Product Labels</field>
+        <field name="res_model">print.product.label</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+        <field name="context">{'default_purchase_ids': active_ids}</field>
+        <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+        <field name="binding_view_types">form,list</field>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
