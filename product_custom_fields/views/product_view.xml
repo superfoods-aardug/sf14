@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_template_only_form_view_inherit_fields" model="ir.ui.view">
+        <field name="name">product.template.form.view.inherit.fields</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_information']//group[@name='group_general']" position="inside">
+                <field name="x_aa_sf_is_biologisch"/>
+                <field name="x_aa_sf_Skal_code" attrs="{'required': [('x_aa_sf_is_biologisch', '!=', False)]}"/>
+                <field name="x_aa_sf_land_desc" attrs="{'required': [('x_aa_sf_is_biologisch', '!=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
